@@ -5,9 +5,9 @@ import com.example.firstprojectdb.services.DarbuotojasService;
 import com.example.firstprojectdb.services.MyRestControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -24,12 +24,9 @@ public class MyRestController {
 
     @GetMapping("/all")
     public List<Darbuotojas> getAll() {
-        return service.getAllDarbuotojai();
-    }
-
-    @PostMapping("/create")
-    public void createDarbuotojas() {
-        darbuotojasService.printSomething();
+//        return service.getAllDarbuotojai();
+        System.out.println("pasiekeme getAll() metoda");
+        return new ArrayList<>();
     }
 
 }

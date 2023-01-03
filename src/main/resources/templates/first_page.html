@@ -2,10 +2,19 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>THIS IS A VIEW / PAGE</title>
 </head>
 <body>
-<h1>LABAS!</h1>
+<h1>LABAS! + <p th:text="${labas}"></p> </h1>
+<h2 th:text="#{labas}"></h2>
+----------------------------------------
+<form action="#" th:action="@{/createStuffAsIWanttoSomethingElse}" th:object="${darbuotojas}" method="post">
+    <p>kodas: <input type="text" th:field="*{asmensKodas}" /></p>
+    <p>vardas: <input type="text" th:field="*{vardas}" /></p>
+<!--    * atlieka two way binding'a = Selection Variable Expressions-->
+    <p>pavarde: <input type="text" th:field="*{pavarde}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
 <br/>
 </body>
 </html>
