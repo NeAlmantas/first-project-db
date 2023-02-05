@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -17,16 +16,14 @@ public class MyRestController {
     private final DarbuotojasService darbuotojasService;
 
     @Autowired
-    public MyRestController(MyRestControllerService service, DarbuotojasService darbuotojasService) { //TODO KONSTRUKTORIUS!!!!!
+    public MyRestController(MyRestControllerService service, DarbuotojasService darbuotojasService) {
             this.service = service;
             this.darbuotojasService = darbuotojasService;
     }
 
     @GetMapping("/all")
     public List<Darbuotojas> getAll() {
-//        return service.getAllDarbuotojai();
-        System.out.println("pasiekeme getAll() metoda");
-        return new ArrayList<>();
+        return service.getAllDarbuotojai();
     }
 
 }

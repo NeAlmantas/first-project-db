@@ -8,4 +8,6 @@ public interface MyRestControllerService {
 
     List<Darbuotojas> getAllDarbuotojai();
 
+    Darbuotojas getById(String id);
+
 }

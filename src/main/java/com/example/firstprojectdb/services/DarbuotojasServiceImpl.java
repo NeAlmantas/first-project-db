@@ -1,9 +1,14 @@
 package com.example.firstprojectdb.services;
 
 import com.example.firstprojectdb.model.Darbuotojas;
+import com.example.firstprojectdb.repo.DarbuotojasRepo;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
+
 @Component("darbuotojasService")
+@RequiredArgsConstructor
 public class DarbuotojasServiceImpl implements DarbuotojasService {
 
     @Override
@@ -17,13 +22,3 @@ public class DarbuotojasServiceImpl implements DarbuotojasService {
         //TODO SUKURTI DARBUOTOJAS OBJEKTA
     }
 }
-
-//@Configuration
-//public class ConfigurationSetup {
-//
-//    @Bean
-//    public MyRestControllerService myRestControllerService() {
-//        MyRestControllerService restControllerService = new MyRestControllerServiceImpl();
-//        return restControllerService;
-//    }
-//}

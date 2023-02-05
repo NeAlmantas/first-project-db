@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Sis puslapis nereikalauja autentikacijos.
+
+<div style="margin-top: 20px;" th:text="${#authentication.name}">
+    The value of the "name" property of the authentication object should appear here.
+</div>
+
+<div style="margin-top: 20px;" th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+    This will only be displayed if authenticated user has role ADMIN.
+</div>
+
+</body>
+</html>
